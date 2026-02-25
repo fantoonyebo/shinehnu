@@ -13,6 +13,7 @@ pip install tkinter
 openssl genpkey -algorithm RSA -out server.key -pkeyopt rsa_keygen_bits:4096
 
 2. 新建名为"server.csr.cnf"的配置文件，内容如下：
+
 [req]
 distinguished_name = req_distinguished_name
 req_extensions = req_ext
@@ -36,6 +37,7 @@ IP.1 = 127.0.0.1
 openssl req -new -key server.key -out server.csr -config server.csr.cnf
 
 4. 新建名为"server.crt.cnf"的配置文件，内容如下：
+
 [req]
 distinguished_name = req_distinguished_name
 x509_extensions = v3_req
